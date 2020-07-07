@@ -60,6 +60,8 @@ describe('index.js', function () {
     })
   })
 
+  // const unmodifiedTestArr = [1, 2, 3, 4]
+  // const unmodifiedTestObj = {one: 1, two: 2, three: 3, four: 4}
   describe('reduce', function () {
     const testArr = unmodifiedTestArr.slice() // arr is [1, 2, 3, 4]
     const callback = (acc, val, collection) => (acc + (val * 3))
@@ -71,7 +73,7 @@ describe('index.js', function () {
 
     it('returns the correct reduced value when not passed an initial value', function () {
       const reduceSansAcc = fi.reduce(testArr, callback)
-      expect(reduceSansAcc).to.equal(28)
+      expect(reduceSansAcc).to.equal(30)
     })
 
     it('does not modify the original array', function () {
